@@ -1,5 +1,3 @@
-const $root = document.getElementById("root");
-
 const TEXT_ELEMENT = "TEXT ELEMENT";
 const TEXT_ELEMENT_VALUE_PROP = "nodeValue";
 
@@ -50,13 +48,8 @@ function createTextElement(value) {
   return createElement(TEXT_ELEMENT, { nodeValue: value });
 }
 
-render(
-  createElement(
-    "div",
-    {
-      style: "color: red;border:1px solid black;",
-    },
-    [createElement("h1", { innerText: "Text inside container" }), createTextElement("\nThis is a text element")]
-  ),
-  $root
-);
+export default {
+  render,
+  createElement,
+  createTextElement,
+};
